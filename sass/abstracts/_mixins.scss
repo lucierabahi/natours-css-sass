@@ -1,0 +1,74 @@
+@mixin clearfix {
+    &::after {
+        content: '';
+        display: table;
+        clear: both;
+    }
+}
+
+@mixin center-horizontal-vertical {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+// MEDIA QUERY MANAGER
+/*
+0 - 600px:      Phone
+600 - 900 px:   Tablet portrait
+900 - 1200 px:  Tablet landscape
+[1200 - 1800] normal style, desktop first approach
+1800px + :      Big desktop
+
+Allows to only change breakpoints in the mixin file, 
+instead of each individual scss file.
+
+I) $breakpoint argument choices
+- phone         600px/16px = 37.5em
+- tab-port      900px/16px = 56.25em
+- tab-land      1200px/16px = 75em
+- big-desktop   1800px/16px = 112.5em
+
+II) Relative units
+EM and REM settings aren't affected by the author 
+defined root font-size in Media Queries: 
+
+    html {
+        font-size: 62.5%;
+    }
+
+1em or 1rem in a Media Query is always 
+equal to the font-size coming from the browser 
+(by default: 16px). So instead of 1em = 10px, 
+1em = 16px.
+
+III) Order for Media Queries implementation
+- base + typography > 
+- general layout + grid > 
+- page layout >
+- components
+*/
+
+@mixin respond($breakpoint) {
+    @if$breakpoint == phone {
+        @media only screen and (max-width: 37.5em) {
+            @content;
+        }
+    }
+    @if$breakpoint == tab-port {
+        @media only screen and (max-width: 56.25em) {
+            @content;
+        }
+    }
+    @if$breakpoint == tab-land {
+        @media only screen and (max-width: 75em) {
+            @content;
+        }
+    }
+    @if$breakpoint == big-desktop {
+        @media only screen and (min-width: 112.5em) {
+            @content;
+        }
+    }
+}
