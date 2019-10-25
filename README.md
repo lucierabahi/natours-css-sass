@@ -7,17 +7,17 @@ https://lucierabahi.github.io/natours-css-sass/
 
 ---        
               
-<img src="https://raw.githubusercontent.com/lucierabahi/zest-on/master/screens/screen-search.png" width="500">
+<img src="https://raw.githubusercontent.com/lucierabahi/natours-css-sass/master/natours0.png" width="500">
             
 ---   
 ---        
               
-<img src="https://raw.githubusercontent.com/lucierabahi/zest-on/master/screens/screen-search2.png" width="500">
+<img src="https://raw.githubusercontent.com/lucierabahi/natours-css-sass/master/natours.png" width="500">
             
 ---   
 ---        
               
-<img src="https://raw.githubusercontent.com/lucierabahi/zest-on/master/screens/screen-shopping-list.png" width="500">
+<img src="https://raw.githubusercontent.com/lucierabahi/natours-css-sass/master/natours2.png" width="500">
             
 ---    
 
